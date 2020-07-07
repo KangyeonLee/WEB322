@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="./css/style.css">
+            <script src="./js/popUp.js"></script>
+            <title>{{title}}</title>
+        </head>
+
+        <body>
+            <header>
+                <div class="navLeft">
+                    <img id="logo" src="./images/logo.png" alt="Main logo">
+                </div>
+                <div class="navCenter">
+                    <nav>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/productListing">All Packages</a></li>
+                            <li><a href="/contactUs">Contact Us</a></li>
+                            <li><a href="#">By Diet</a></li>
+                            <li><a href="#">By Goal</a></li>
+                            <li><a href="#">About Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="navRight">
+                    <div class="buttonWrapper">
+                        <button id="signUpBtn">Sign Up</button>
+                        <button id="signInBtn">Sign In</button>
+                    </div>
+                </div>
+            </header>
+            <main>
+                {{{body}}}
+          
+                 <div class="signUpModal" id="signUpModal">
+                    <span class="close">&times;</span>
+                     <div class="modalWrapper"> 
+                        <h2 class="signUpTitle">Create Account</h2>
+                        <form method="POST" action ="/creatAccount">
+                            <div class="input">
+                                <input required class="inputBoxes" onkeyup="nameValidation(this.value, this.name)" name="firstname" id="firstname" type="text" placeholder="First Name" required>
+                                <br>
+                                <input required class="inputBoxes" onkeyup="nameValidation(this.value, this.name)" name="lastname" id ="lastname" type="text" placeholder="Last Name" required>
+                                <br>
+                                <input required class="inputBoxes" name="email" type="email" placeholder="Email" required>
+                                <br>
+                                <input required class="inputBoxes" pattern="(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+){6,12}" id="password" name="password" type="password" placeholder="Password" required>
+                                <br>
+                            </div>
+                            <button type="submit" class="signUp">Sign up</button>
+                        </form>
+                     </div>
+                </div>
+
+                 <div class="signInModal" id="signInModal">
+                    <span class="close">&times;</span>
+                     <div class="modalWrapper"> 
+                        <h2 class="signUpTitle">Customer Login</h2>
+                        <input class="inputBoxes" name="email" type="email" placeholder="Email" required>
+                        <br>
+                        <input class="inputBoxes" onkeyup="passwordValidation(this.value, this.name)" name="password" type="password" placeholder="Password" required>
+                        <div>
+                            <a class="fp">Forgot password?</a>
+                        </div>
+                        <br>
+                        <button class="signIn">Sign In</button>
+                     </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <p class="footerCopy">
+                    &copy; 2020 GANGYEON LEE 15892117 WEB322-Assignment 1
+                </p>
+            </footer>
+        </body>
+    </html>

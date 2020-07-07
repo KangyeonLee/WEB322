@@ -1,0 +1,89 @@
+
+<script src="./js/productList.js"></script>
+
+<div class="hero">
+    <img class="heroImg" src="./images/hero.jpg" alt="hero image">
+    <div class="heroText">Always get <br> fresh meals and grocry</div>
+</div>
+
+
+<div class="heroBanner">
+    Shop fruits, vegetables, juices, coffee & more from home. No additional fees.
+    <button class="order">Order Now</button>
+</div>
+
+<div class="noCooking">
+    <p>No Cooking, Just eating.</p>
+    <div class="gifContainer">
+        <div class="gifWrapper">
+            <img class="gifImg" src="./images/gif01.gif" alt="gif01">
+            <div class="gifName">
+                <span class="gifTitle">Pick</span><br>
+                <span class="gifDesc">100+ menu of all-natural dishes</span>    
+            </div>
+        </div>
+
+        <div class="gifWrapper">
+            <img class="gifImg" src="./images/gif02.gif" alt="gif02">
+                <div class="gifName">
+                <span class="gifTitle">Heat</span><br>
+                <span class="gifDesc">Cooked & delivered</span>    
+            </div>
+        </div>
+
+            <div class="gifWrapper">
+            <img class="gifImg" src="./images/gif03.gif" alt="gif03">
+                <div class="gifName">
+                <span class="gifTitle">Eat</span><br>
+                <span class="gifDesc">Delicious & nutritious</span>    
+            </div>
+        </div>
+
+        <div class="gifWrapper">
+            <img class="gifImg" src="./images/gif04.gif" alt="gif04">
+                <div class="gifName">
+                <span class="gifTitle">Repeat</span><br>
+                <span class="gifDesc">Skip a week or cancel any time</span>    
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="hero2">  
+    <div>
+        <img class="heroImg2" src="./images/hero2.png" alt="hero image">
+        <div class="hero2Text">
+            <span class="hText1">Eat towards your goals</span><br>
+            <span class="hText2">Lose weight, gain muscle, go Vegan or eat Keto - we've got you covered</span>
+        </div>        
+    </div>
+</div>
+
+<div class="productStart">
+    <p class="productDesc1">
+        Our chefs are making these right now!
+    </p>
+
+    <p class="productDesc2">
+        You could be chowing down on any of these meals any time you choose - seriously!<br>
+    Order some (or all) of these meals and see why thousands of Canadians stock us in their fridge!
+    </p>
+</div>
+
+    <div class="productsGrid" id="productsGrid">
+        {{#each data}}
+            <div class="thumbnail">
+                <img src={{imgPath}} alt="Currently No Image!">
+                <div class="fixedSize">
+                    <p class="productTitle">{{title}}</p>
+                    <p class="price">
+                        <span class="dollarSign">$</span>
+                        <span class="productPrice">{{price}}</span>
+                        <span class="productPrice2">00</span>
+                    </p>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+

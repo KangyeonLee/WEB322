@@ -1,0 +1,33 @@
+
+
+<div class="hero3">  
+    <div>
+        <img class="heroImg3" src="./images/hero3.png" alt="hero image">
+        <div class="hero3Text">
+            <span class="hText3">Our Meal Packages</span><br>
+        </div>
+    </div>
+</div>
+
+<div class="packageDesc">
+   <span class="pText1">Pick a package, choose your meals, achieve your goal - </span>
+   <span class="pText2">it's that easy!</span>
+   
+</div>
+
+<div class="packagesGrid" id="packagesGrid">
+        {{#each data}}
+            <div class="thumbnail">
+                <img src={{imgPath}} alt="Currently No Image!">
+                <div class="fixedSize">
+                    <p class="packageTitle">{{title}}</p>
+                    <p class="price">
+                        <span class="dollarSign">$</span>
+                        <span class="productPrice">{{price}}</span>
+                        <span class="productPrice2">00</span><br>
+                    </p>
+                    <span class="pkgDesc">{{description}}</span>
+                </div>
+            </div>
+        {{/each}}
+    </div>
