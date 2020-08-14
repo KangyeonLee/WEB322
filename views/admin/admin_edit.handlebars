@@ -1,0 +1,36 @@
+<div class="adminContainer">
+   <div class="element1">
+        <p class="categoryTitle">
+           Admin - Edit Products
+        </p>
+        <hr class="categoryLine">
+    </div>
+
+    <div class="sidenav">
+        <ul class="navList">
+            <li><a href="/user/admin_dashboard">Admin Dashboard</a></li>
+            <li><a href="/user/admin_create">Add Product</a></li>
+            <li><a href="/user/admin_edit">Edit Product</a></li>
+        </ul>
+    </div>
+
+    <div class="adminListContainer">
+        <div class="adminPackagesGrid" id="adminPackagesGrid">
+        {{#each products}}
+            <div class="adminThumbnail">
+                <img src={{image}} alt="Currently No Image!">
+                <div class="fixedSize">
+                    <p class="packageTitle">{{name}}</p>
+                    <p class="price">
+                        <span class="dollarSign">$</span>
+                        <span class="productPrice">{{price}}</span>
+                        <span class="productPrice2">00</span><br>
+                    </p>
+                    <a href={{deleteLink}}>delete</a>
+                    <a href={{editLink}}>edit</a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+
+    </div>

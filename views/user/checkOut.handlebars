@@ -1,0 +1,64 @@
+<div class="adminContainer">
+   <div class="element1">
+        <p class="categoryTitle">
+            Check Out and Continue to Shipping
+        </p>
+        <hr class="categoryLine">
+    </div>
+
+    <div class="sidenav">
+        <ul class="navList">
+            <li><a href="/user/user_dashboard">User Dashboard</a></li>
+            <li><a href="/user/cart">Shopping Cart</a></li>
+        </ul>
+    </div>
+
+    <div class="cartContainer">
+        <hr class="categoryLine">
+        <div class="total">
+            <p class="totalPro">Total</p>
+            <p class="cartPrice2">CAD</p>
+            <p class="cartPrice3">${{price}}</p>
+        </div>
+    </div>
+
+    <div class="scartContainer">
+        <p class="stitle">Shipping address</p>
+        <div class="sinputBox">
+            <form method="POST" action="/user/place_order">
+                
+                <input class="sinputBoxes" name="firstname" id="firstname"
+                    type="text" placeholder="First Name" required>
+                <br>
+                <input class="sinputBoxes" name="lastname" id="lastname"
+                    type="text" placeholder="Last Name" required>
+                <br>
+                <input class="sinputBoxes" id="company" name="company"
+                    type="text" placeholder="Company" required>
+                <br>
+                <input class="sinputBoxes" id="address" name="address"
+                    type="text" placeholder="Apartment, suite, etc(optional)" required>
+                <br>
+                <input class="sinputBoxes" id="city" name="city"
+                    type="text" placeholder="City" required>
+                <br>
+
+                <input class="sinputBoxes" id="country" name="country"
+                    type="text" placeholder="Country" required>
+                <br>
+                <input class="sinputBoxes" id="province" name="province"
+                    type="text" placeholder="Province" required>
+                <br>
+                <input class="sinputBoxes" id="postalCode" name="postalCode"
+                    type="text" placeholder="Postal Code" required>
+                <br>
+                <input class="sinputBoxes" id="phone" name="phone"
+                    type="text" placeholder="Phone" required>
+                <br>
+                <div class="placeYO">
+                    <button class="pyoBtn">Place your order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

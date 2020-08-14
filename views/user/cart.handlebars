@@ -1,0 +1,45 @@
+<div class="adminContainer">
+   <div class="element1">
+        <p class="categoryTitle">
+            Shopping Cart
+        </p>
+        <hr class="categoryLine">
+    </div>
+
+    <div class="sidenav">
+        <ul class="navList">
+            <li><a href="/user/user_dashboard">User Dashboard</a></li>
+            <li><a href="/user/cart">Shopping Cart</a></li>
+        </ul>
+    </div>
+
+    <div class="cartContainer">
+        {{#log}} {{products}} {{/log}}
+        {{#each products}}
+            <div class="cartThumbnail">
+                <img src={{image}} alt="Currently No Image!">
+                <div class="cartDesc">
+                    <p class="cartTitle">{{name}}</p><br>
+                    <span class="cartPkgDesc">{{description}}</span>                    
+                </div>
+                <a href={{deleteLink}}>delete</a>
+                <p class="cartPrice">${{price}}</p>
+            </div>
+        {{/each}}
+        <hr class="categoryLine">
+        <div class="total">
+            <p class="totalPro">Total</p>
+            <p class="cartPrice2">CAD</p>
+            <p class="cartPrice3">${{total}}</p>
+        </div>
+
+        <div class="cartBtnWrapper">
+            <form method="GET" action="/user/checkout">
+                <button id="ckout" class="addBtn" type="submit">Check Out</button>
+            </form>
+        </div>
+    </div>
+
+    
+
+</div>

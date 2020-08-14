@@ -1,0 +1,117 @@
+<div class="detailContainer">
+    <div class="textContainer">
+        <form method="POST" action="/user/add_to_cart">
+            <input hidden value={{product._id}} name="_id">
+            <div class="detailTitle">
+                {{product.name}}
+            </div>
+
+            <p class="detailPrice">
+                <span class="detailDollarSign">$</span>
+                <span class="detailProductPrice">{{product.price}}</span>
+                <span class="detailProductPrice2">00</span>
+            </p>
+
+            <div class="selection">
+                <label for="mealSelect" class="selectLabel2">
+                    What would you like to see in your package?
+                </label>
+        
+                <div class="prodctCheckbox">
+                    <input type="checkbox" class="checkBox2">
+                    <label for="setMeal" class="checkLabel2">Butter Chicken With Mixed Vegetables</label><br>
+
+                    <input type="checkbox" class="checkBox2">
+                    <label for="setMeal" class="checkLabel2">Teriyaki Chicken</label><br>
+
+                    <input type="checkbox" class="checkBox2">
+                    <label for="setMeal" class="checkLabel2">Korean BBQ Beef</label><br>
+
+                    <input type="checkbox" class="checkBox2">
+                    <label for="setMeal" class="checkLabel2">Mediterranean Bolognese</label><br>
+                </div>
+                <div class="mealSelect">
+                    <label for="mealSelect" class="selectLabel2">
+                        How many meals in your package
+                    </label>
+
+                    <select class="detailSelect" name="quantity">
+                        <br>
+                        <label class="floatLabel">Quantity</label><br>
+                        <option selected value=1>10</option>
+                        <option value=2>12</option>
+                        <option value=3>15</option>
+                        <option value=4>18</option>
+                    </select><br>
+                </div>
+
+                <div class="soupSelect">
+                    <label for="mealSelect" class="selectLabel2">
+                        Add soups to your package
+                    </label>
+                    <select class="detailSelect" name="quantity">
+                        <label class="floatLabel">Quantity</label><br>
+                        <option selected value=1>No soup</option>
+                        <option value=2>1 Soup</option>
+                        <option value=3>2 Soups</option>
+                        <option value=4>3 Soups</option>
+                    </select><br>
+                </div>
+            </div>
+
+            <div class="spinner">
+                <div class="eaInput">
+                    <input type="text" class="itemEa" maxlength="100" pattern="[0-100-*" value="1">
+                </div>
+                <div class="eaBtn">
+                    <div class="up">+</div>
+                    <div class="down">-</div>
+                </div>
+            </div>
+
+            <div class="addBtnWrapper">
+                {{#if loggedIn}}
+                    <button id="addBtn" class="addBtn" type="submit">Add to Cart</button>
+                {{/if}}
+            </div>
+        </form>
+
+        <div class="detailDesc">
+            <p>Designed to help you gain lean muscle mass. 
+                Larger portions of protein and carbohydrates to help hit your health and fitness goals. 
+                You can select the meats you would like to see in your package**, 
+                or if you don't select any meats then it will come with a 
+                variety of our best selling meals from the Lunch & Dinner menu.
+
+                <br>
+                <br>
+
+                Each meal in this package contains 2 cups of Carbohydrates, 
+                1 cup of Vegetables and 6oz of meat protein (unless you add 
+                "protein plus" to your order). 
+                You can find the nutritional information for your meals 
+                on the Nutritional Information tab on our website.
+
+                <br>
+                <br>
+
+                ** By selecting your meats you will see them in your package. 
+                However, due to very rare circumstances (economic supply), 
+                we cannot guarantee you will receive exactly what you selected
+                
+                <br>
+                <br>
+
+                **Exercise and proper diet are necessary to achieve and maintain your goals. 
+                Results vary depending upon starting point, goals, and effort**.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="detailThmbContainer">
+         <div class="prodctThumb">
+            <img class="pThumb" src={{product.image}} alt="hero image">
+        </div>
+    </div>
+</div>

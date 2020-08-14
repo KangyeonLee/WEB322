@@ -1,0 +1,54 @@
+<div class="adminContainer">
+   <div class="element1">
+        <p class="categoryTitle">
+           Admin - Edit Products
+        </p>
+        <hr class="categoryLine">
+    </div>
+
+    <div class="sidenav">
+        <ul class="navList">
+            <li><a href="/user/admin_dashboard">Admin Dashboard</a></li>
+            <li><a href="/user/admin_create">Add Product</a></li>
+            <li><a href="/user/admin_edit">Edit Product</a></li>
+        </ul>
+    </div>
+
+    <div class="adminInputContainer">
+        <form method="POST" action="/user/admin_submitEdit">
+            <div class="adminWrapper">
+                <input hidden value={{product._id}} name="_id">
+                <label for="MealName">Meal Package Name</label>    
+                <input type="text" class="inputBox2" name="name" value={{product.name}}> <br> 
+
+                <label for="MealPrice">Meal Package Price</label>    
+                <input type="text" class="inputBox2" name="price" value={{product.price}}> <br> 
+
+                <label for="MealDesc">Descrtiption</label>    
+                <textarea class="txtArea" name="description" >{{product.description}}</textarea> <br>
+
+                <label for="FoodCategory">Food Category</label>    
+                <input type="text" class="inputBox2" name="category" value={{product.category}}> <br> 
+
+                <label for="NumofMeals">Number of Meals</label>    
+                <input type="text" class="inputBox2" name="numberOfMeals" value={{product.numberOfMeals}}> <br> 
+
+                <input type="checkbox" class="checkBox">
+                <label for="setMeal" class="checkLabel" name="set" checked={{product.set}}> Set Meal Packages</label><br>
+                
+                    <label for="img" class="selectLabel">Select image:</label>
+                    <input type="file" class="selectInput" accept="image/*" name="image" value={{product.image}}>
+                    <input hidden name="preImage" value={{product.image}}>
+
+                <div>
+                    <div class="editBtnWrapper">
+                        <button id="editBtn" class="editBtn">Edit</button>
+                        <button id="cancelBtn" class="cancelBtn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+
+</div>

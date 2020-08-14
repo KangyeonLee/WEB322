@@ -1,0 +1,51 @@
+<div class="adminContainer">
+   <div class="element1">
+        <p class="categoryTitle">
+           Admin - Create Products
+        </p>
+        <hr class="categoryLine">
+    </div>
+
+    <div class="sidenav">
+        <ul class="navList">
+        <li><a href="/user/admin_dashboard">Admin Dashboard</a></li>
+            <li><a href="/user/admin_create">Add Product</a></li>
+            <li><a href="/user/admin_edit">Edit Product</a></li>
+        </ul>
+    </div>
+
+    <div class="adminInputContainer">
+        <form method="POST" action="/product/addProduct" encType="multipart/form-data">
+            <div class="adminWrapper">
+                <label for="MealName">Meal Package Name</label>    
+                <input type="text" class="inputBox2" name="name"> <br> 
+
+                <label for="MealPrice">Meal Package Price</label>    
+                <input type="text" class="inputBox2" name="price"> <br> 
+
+                <label for="MealDesc">Descrtiption</label>    
+                <textarea class="txtArea" name="description"></textarea> <br>
+
+                <label for="FoodCategory">Food Category</label>    
+                <input type="text" class="inputBox2" name="category"> <br> 
+
+                <label for="NumofMeals">Number of Meals</label>    
+                <input type="text" class="inputBox2" name="numberOfMeals"> <br> 
+
+                <input type="checkbox" class="checkBox">
+                <label for="setMeal" class="checkLabel" name="set"> Set Meal Packages</label><br>
+                
+                    <label for="img" class="selectLabel">Select image:</label>
+                    <input type="file" class="selectInput" accept="image/*" name="image">
+                <div>
+                    <div class="createBtnWrapper">
+                        <button id="createBtn" class="createBtn" type="submit">Create</button>
+                        <button id="cancelBtn" class="cancelBtn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+
+</div>

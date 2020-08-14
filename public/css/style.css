@@ -6,7 +6,7 @@
         margin: 0;;
     }
 
-    /***** header *****/
+    /* header */
     header {
         display: flex;
         width: 100%;
@@ -74,16 +74,169 @@
         font-weight: bold;
     }
 
+    .user-name{
+        display: inline;
+    }
+    .logout-form{
+        display: inline;
+    }
+
+    /* side navigation */
+    .sidenav {
+        width: 20%;
+        position: relative;
+        float: left;
+        background-color: white;
+        width: 170px;
+        padding: 20px;
+        margin-top: 50px;
+        border: 1px solid #bcbcbc;
+        text-align: center;
+    }
+    
+    
+    ul.navList li {
+        list-style: none;
+        padding: 10px 0px;
+    }
+
+
     /***** modal *****/
 
-    /* sign up/in btn */
+    /* Button */
+
     .buttonWrapper{
         right: 0;
         position: absolute;
         transform: translate(-100px,50%);
     }
 
-    #signUpBtn {
+    .editBtnWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .addBtnWrapper {
+        align-items: center;
+        justify-content: center;
+        width: 450;
+        margin: 0;
+    }
+
+    .createBtnWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .checkBtnWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        float: left;
+    }
+
+    .addBtn {
+        background-color: #d4315b;
+        border: none;
+        color: white;
+        padding: 12px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 2 10px;
+        cursor: pointer;
+        font-family: "Montserrat";
+        height: 52px;
+        margin-left: 30px;
+    }
+
+    .pyoBtn {
+        background-color: #d4315b;
+        border: none;
+        color: white;
+        padding: 12px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 2 10px;
+        cursor: pointer;
+        font-family: "Montserrat";
+        height: 52px;
+    }
+
+    .adminEdit {
+        right: 0;
+        position: relative;
+        transform: translate(-100px,50%);
+    }
+
+    .editBtn {
+        background-color: #d4315b;
+        border: none;
+        color: white;
+        padding: 12px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 2 10px;
+        cursor: pointer;
+        font-family: "Montserrat";
+        margin: 10px;
+    }
+
+    .createBtn {
+        background-color: #d4315b;
+        border: none;
+        color: white;
+        padding: 12px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 2 10px;
+        cursor: pointer;
+        font-family: "Montserrat";
+        margin: 10px;
+    }
+
+    .checkBtn {
+        background-color: #d4315b;
+        border: none;
+        color: white;
+        padding: 12px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 2 10px;
+        cursor: pointer;
+        font-family: "Montserrat";
+        margin: 10px;
+    }
+
+    .cancelBtn {
+        margin: 10px;
+        background-color: #aaaaaa;
+        border: none;
+        color: white;
+        padding: 12px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 2 10px;
+        cursor: pointer;
+        font-family: "Montserrat";
+    }
+
+    .signUpBtn {
         background-color: #d4315b;
         border: none;
         color: white;
@@ -97,7 +250,7 @@
         font-family: "Montserrat";
     }
 
-    #signInBtn {
+    .signInBtn {
         background-color: #aaaaaa;
         border: none;
         color: white;
@@ -182,6 +335,20 @@
         font-family: "Montserrat";
     }
 
+    button.signOut {
+        background-color: #d4315b;
+        border: none;
+        color: white;
+        padding: 12px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 2 10px;
+        cursor: pointer;
+        font-family: "Montserrat";
+    }
+
     a.fp {
         color: #d4315b;
     }
@@ -203,6 +370,23 @@
     /* input boxes */
     div.inputBox {
         margin: 0 auto;
+        display: table;
+    }
+
+    .sinputBoxes {
+        width: 750px !important;
+        height: 50px;
+        padding: 12px 20px;
+        display: inline-block;
+        border: 1px solid #d5d8db;
+        margin: 0 0 20px 0 !important;
+        border-radius: 5px;
+        box-sizing: border-box;
+        position: relative;  
+    }
+
+    div.inputBox2 {
+        margin: 0;
         display: table;
     }
 
@@ -242,6 +426,8 @@
         text-decoration: none;
         cursor: pointer;
     }
+
+
 
     /***** hero section *****/
     .heroImg {
@@ -426,6 +612,7 @@
         padding-bottom: 10px;
         text-align: center;
         margin: 0px;
+        text-decoration: none;
     }
 
     .price {
@@ -433,6 +620,7 @@
         word-spacing: -4px;
         padding-bottom: 30px;
         margin: 0px;
+        text-decoration: none;
     }
 
     .dollarSign {
@@ -441,12 +629,14 @@
         font-size: 12px;
         position: relative;
         top: -.4em;
+        text-decoration: none;
     }
 
     .productPrice {
         font-family: "Montserrat";
         color: #212224;
         font-size: 15pt;
+        text-decoration: none;
     }
 
     .productPrice2 {
@@ -455,6 +645,7 @@
         font-size: 11pt;
         position: relative;
         top: -.2em;
+        text-decoration: none;
     }
 
     /* package start */
@@ -516,11 +707,6 @@
         margin: auto;
     }
 
-    .thumbnail {
-        background-color: rgba(255, 255, 255, 0.8);
-        padding: 20px;
-    }
-
     .fixedSize {
         width: 100%;
     }
@@ -577,8 +763,394 @@
         font-size: 18px;
     }
 
+    /* product detail */
+    .detailContainer {
+        width: 1000px;
+        padding-top: 50px;
+        margin: auto;
+    }
 
-    /** Footer **/
+    .textContainer {
+        width: 400px;
+        margin: 0 0 0 0;
+        float: left;
+        position: relative;
+    }
+
+    .detailThmbContainer {
+        width: 550px;
+        position: relative;
+        float: right;
+        padding-left: 50px;
+    }
+
+    .detailTitle {
+        font-family: "Montserrat";
+        color: #212224;
+        font-size: 36px;
+        font-weight: 900;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: left;
+        margin: 0px;
+    }
+
+    .selection {
+        padding-top: 50px;
+    }
+
+    .detatilPrice {
+        position: relative;
+        text-align: left;
+    }
+
+    .detailDollarSign {
+        font-family: "Montserrat";
+        color:  #d4315b;
+        font-size: 26px;
+        position: relative;
+        top: -.1em;
+        font-weight: 900;
+    }
+
+    .detailProductPrice {
+        font-family: "Montserrat";
+        color:  #d4315b;
+        font-size: 32px;
+        font-weight: 900;
+    }
+
+    .detailProductPrice2 {
+        font-family: "Montserrat";
+        color:  #d4315b;
+        font-size: 20px;
+        position: relative;
+        top: -.4em;
+        font-weight: bold;
+    }
+
+    .detailDesc {
+        font-family: "Montserrat";
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 900;
+        width: 1000px;
+        padding-top: 100px;
+    }
+
+    .prodctCheckbox {
+        display: inline-block;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .checkBox2 {
+        display: inline;
+        margin-bottom: 30px;
+    }
+
+    .checkLabel2 {
+        color: #525559;
+        font-family: "Montserrat";
+        font-size: 16px;
+    }
+
+    .selectLabel2 {
+        margin: 0;
+        font-family: "Montserrat";
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .detailSelect{
+        width: 100%;
+        height: 50px;
+        /*margin: 1.5em;*/
+        background-color: white;
+        border: 1px solid #d5d8db;
+        border-radius: 5px;
+        display: inline-block;
+        font-family: "Montserrat";
+        color: #a3a6a9;
+        font-size: 18px;
+        margin-bottom: 30px;
+
+        line-height: 1.5em;
+        padding: 0.5em 3.5em 0.5em 1em;
+        margin-top: 20px;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        
+        background-image: linear-gradient(45deg, transparent 50%, gray 30%), linear-gradient(135deg, gray 50%, transparent 50%);
+        background-position: calc(100% - 20px) calc(1.4em + 2px), calc(100% - 15px) calc(1.4em + 2px), calc(100% - .5em) .5em;
+        background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
+        background-repeat: no-repeat;
+    }
+
+    .prodctThumb {
+        padding-top: 20px;
+    }
+
+    .pThumb {
+        width: 550px;
+        height: 600px;
+    }
+
+
+    .spinner input[type=text] {
+        width: 80px;
+        height: 52px;
+        padding: 12px 20px;
+        margin: 0 !important;
+        display: inline-block;
+        border: 1px solid #d5d8db;
+        box-sizing: border-box;
+        position: relative;
+        text-align: center;
+    }
+
+    .eaInput {
+        float: left;
+    }
+
+    .eaBtn {
+       float: left;
+    }
+
+    .eaBtn .up {
+        overflow: hidden;
+        width: 50px;
+        height: 50px;
+        color: #d4315b;
+        line-height: 50px;
+        text-align: center;
+        border: solid 1px #d4315b;
+        display: inline-block;
+    }
+
+    .eaBtn .down {
+        overflow: hidden;
+        width: 50px;
+        height: 50px;
+        color: #d4315b;
+        line-height: 50px;
+        text-align: center;
+        border: solid 1px #d4315b;
+        display: inline-block;
+
+    }
+
+    /***** admin section *****/
+    .adminContainer {
+        width: 1000px;
+        margin: auto;
+    }
+
+    .adminWrapper {
+        position: relative;
+        float: right;
+        padding-top: 50px;
+    }
+
+    .adminWrapper input[type=text] {
+        margin-top: 0 !important;
+        margin-bottom: 50px !important;
+        float: right;
+        width: 700px !important;
+    }
+
+    .adminWrapper label {
+        margin-bottom: 50px;
+        display: block;
+        margin: 0 1.5em 1.5em;
+    }
+
+    .adminWrapper textarea {
+        margin: 0 1.5em 1.5em;
+        float: right;
+    }
+
+    .adminInputContainer {
+        position: relative;
+        float: right;
+    }
+
+    .adminListContainer {
+        width: 1000px;
+    }
+
+    .adminThumbnail img {
+        width: 210px;
+        height: 210px;
+    }
+
+    .adminPackagesGrid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        background-color: white;
+        width: 750px;
+        margin: auto;
+        float: right;
+    }
+
+    .thumbnail {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+    }
+
+    .adminThumbnail {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+    }
+
+    .element1 {
+        margin-top: 100px;
+    }
+
+    .txtArea {
+        min-height: 100px;
+        min-width: 700px;
+        margin-bottom: 50px;
+    }
+
+    .checkBox {
+        margin-left: 30px;
+        display: inline;
+        margin-bottom: 50px;
+    }
+
+    .checkLabel {
+        margin: 0 !important;
+        display: inline !important;
+    }
+
+    .selectLabel {
+        margin-left: 30px;
+        margin-bottom: 0 !important;
+        margin-right: 0 !important;
+        display: inline !important;
+    }
+
+    .selectInput {
+        display: inline-block ;
+        margin: auto !important;
+    }
+
+
+    .dashBoardContainer {
+        position: relative;
+        margin: 0;
+        padding-top: 50px;
+        width: 700px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .dashBoardContainer h2 {
+      padding-bottom: 30px;
+    }
+
+    /***** Cart section *****/
+    .cartContainer {
+        position: relative;
+        margin: 0;
+        padding-top: 50px;
+        width: 750px;
+        display: inline-block;
+        float: right;
+    }
+
+    .cartThumbnail img{
+        width: 80px;
+        height: 80px;
+        vertical-align: middle;
+        margin-bottom: 20px;
+    }
+
+    .cartDesc {
+        display: inline-block;
+        width: 400px;
+        font-family: "Montserrat";
+        font-size: 14px;
+        padding-left: 20px;
+    }
+
+    .cartTitle {
+        margin: 0;
+        float: left;
+    }
+
+    .cartPrice {
+        margin: 0;
+        float: right;
+        display: inline-block;
+        font-family: "Montserrat";
+    }
+
+    .total {
+        display: inline;
+    }
+
+    .cartPrice2 {
+        margin: 0;
+        float: right;
+        display: inline;
+        font-family: "Montserrat";
+        padding-left: 20px;
+        top: 6px;
+        position: relative;
+        color: #d4315b;
+    }
+
+    .cartPrice3 {
+        margin: 0;
+        float: right;
+        display: inline;
+        font-family: "Montserrat";
+        padding-left: 20px;
+        position: relative;
+        font-size: 30px;
+        color: #d4315b;
+    }
+
+    .totalPro {
+        font-family: "Montserrat";
+        font-size: 24px;
+        font-weight: bold;
+        display: inline;
+        float: left;
+        margin: 0;
+    }
+
+    .cartBtnWrapper {
+        padding-top: 100px;
+        margin: 0;
+        float: right;
+    }
+
+    .stitle {
+        font-family: "Montserrat";
+        font-size: 24px;
+        font-weight: bold;
+        padding-bottom: 30px;
+        margin: 0;
+    }
+
+    .scartContainer {
+        position: relative;
+        margin: 0 0 0 20;
+        padding-top: 50px;
+        width: 750px;
+        display: inline-block;
+        float: right;
+    }
+
+    /***** Footer section *****/
     .footer {
         background: #f3f6f9;
         border-top: #d5d8db solid 1px;

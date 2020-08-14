@@ -1,0 +1,26 @@
+<div class="adminContainer">
+   <div class="element1">
+        <p class="categoryTitle">
+           Admin Dashboard
+        </p>
+        <hr class="categoryLine">
+    </div>
+
+    <div class="sidenav">
+        <ul class="navList">
+            <li><a href="/user/admin_dashboard">Admin Dashboard</a></li>
+            <li><a href="/user/admin_create">Add Product</a></li>
+            <li><a href="/user/admin_edit">Edit Product</a></li>
+        </ul>
+    </div>
+
+    <div class="dashBoardContainer">
+        <h2> Welcome Back {{firstName}} {{lastName}} to LIVEFIT!</h2>
+        <form method="GET" action="/account/logout">
+            <button class="signOut" type="submit">Sign Out</button>
+        </form>
+    </div>
+
+    
+
+</div>

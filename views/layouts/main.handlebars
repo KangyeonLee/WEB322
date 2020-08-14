@@ -4,43 +4,58 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
              <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-            <link rel="stylesheet" type="text/css" href="./css/style.css">
-            <script src="./js/popUp.js"></script>
+            <link rel="stylesheet" type="text/css" href="/css/style.css">
+            <script src="/js/popUp.js"></script>
             <title>{{title}}</title>
         </head>
 
         <body>
             <header>
                 <div class="navLeft">
-                    <img id="logo" src="./images/logo.png" alt="Main logo">
+                    <img id="logo" src="/images/logo.png" alt="Main logo">
                 </div>
                 <div class="navCenter">
                     <nav>
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li><a href="/productListing">All Packages</a></li>
+                            <li><a href="/product/productListing">All Packages</a></li>
                             <li><a href="/contactUs">Contact Us</a></li>
-                            <li><a href="#">By Diet</a></li>
-                            <li><a href="#">By Goal</a></li>
-                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Diet Meal</a></li>
+                            <li><a href="#">Healty Meal</a></li>
+                            <li><a href="#">Grocery Store</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="navRight">
                     <div class="buttonWrapper">
-                        <button id="signUpBtn">Sign Up</button>
-                        <button id="signInBtn">Sign In</button>
+                        {{#if loggedIn}}
+                            <div class="user-name">
+                                {{#if isAdmin}}
+                                    <a href="/user/admin_dashboard">
+                                {{else}}
+                                    <a href="/user/user_dashboard">
+                                {{/if}}
+                                {{{firstName}}}
+                                {{{lastName}}}
+                                </a>
+                            </div>
+                            <form method="GET" action="/account/logout" class="logout-form">
+                                <button type="submit" class="signUpBtn">Log out</button>
+                            </form>
+                        {{else}}
+                            <button id="signUpBtn" class="signUpBtn">Sign Up</button>
+                            <button id="signInBtn" class="signInBtn">Sign In</button>
+                        {{/if}}
                     </div>
                 </div>
             </header>
             <main>
                 {{{body}}}
-          
                  <div class="signUpModal" id="signUpModal">
                     <span class="close">&times;</span>
                      <div class="modalWrapper"> 
                         <h2 class="signUpTitle">Create Account</h2>
-                        <form method="POST" action ="/creatAccount">
+                        <form method="POST" action ="/account/creatAccount">
                             <div class="input">
                                 <input required class="inputBoxes" onkeyup="nameValidation(this.value, this.name)" name="firstname" id="firstname" type="text" placeholder="First Name" required>
                                 <br>
@@ -55,21 +70,42 @@
                         </form>
                      </div>
                 </div>
-
                  <div class="signInModal" id="signInModal">
                     <span class="close">&times;</span>
                      <div class="modalWrapper"> 
-                        <h2 class="signUpTitle">Customer Login</h2>
-                        <input class="inputBoxes" name="email" type="email" placeholder="Email" required>
-                        <br>
-                        <input class="inputBoxes" onkeyup="passwordValidation(this.value, this.name)" name="password" type="password" placeholder="Password" required>
-                        <div>
-                            <a class="fp">Forgot password?</a>
-                        </div>
-                        <br>
-                        <button class="signIn">Sign In</button>
+                        <form method="POST" action="/account/login">
+                            <h2 class="signUpTitle">Customer Login</h2>
+                            <input class="inputBoxes" name="email" type="email" placeholder="Email" required>
+                            <br>
+                            <input class="inputBoxes" onkeyup="passwordValidation(this.value, this.name)" name="password" type="password" placeholder="Password" required>
+                            <div>
+                                <a class="fp">Forgot password?</a>
+                            </div>
+                            <br>
+                            <button class="signIn" type="submit">Sign In</button>
+                        </form>
                      </div>
                 </div>
+
+                {{#if failedLogin}}
+                <div class="signInModal" id="failedModal" style="display:block">
+                    <span class="close">&times;</span>
+                     <div class="modalWrapper"> 
+                        <form method="POST" action="/account/login">
+                            <h2 class="signUpTitle">Customer Login</h2>
+                            <p class="fp">Email or Password is wrong</p>
+                            <input class="inputBoxes" name="email" type="email" placeholder="Email" required>
+                            <br>
+                            <input class="inputBoxes" onkeyup="passwordValidation(this.value, this.name)" name="password" type="password" placeholder="Password" required>
+                            <div>
+                                <a class="fp">Forgot password?</a>
+                            </div>
+                            <br>
+                            <button class="signIn" type="submit">Sign In</button>
+                        </form>
+                     </div>
+                </div>
+                {{/if}}
             </main>
             <footer class="footer">
                 <p class="footerCopy">
